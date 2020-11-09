@@ -1,0 +1,48 @@
+// font-family
+$font-family: 'Open Sans', "sans-serif";
+
+// weight
+$weight-bold: 700;
+$weight-semibold: 600;
+$weight-popular: 400;
+
+// font size
+$font-size-xx: xx-small;
+$font-size-x: x-small;
+$font-size-s: small;
+$font-size-m: medium;
+$font-size-l: large;
+$font-size-xl: x-large;
+$font-size-xxl: xx-large;
+
+// font stretch
+$font-stretch-uc: ultra-condensed;
+$font-stretch-ec: extra-condensed;
+$font-stretch-c: condensed;
+$font-stretch-sc: semi-condensed;
+$font-stretch-n: normal;
+$font-stretch-se: semi-expanded;
+$font-stretch-e: expanded;
+$font-stretch-ee: extra-expanded;
+$font-stretch-ue: ultra-expanded;
+
+// font style
+$italic: italic;
+$undrline: underline;
+
+// Font scales
+$font-scale-xxs: 0.91rem; // 10px
+$font-scale-xs: 1.09rem; // 12px
+$font-scale-s: 1.27rem; // 14px
+$font-scale-m: 1.45rem; // 16px
+$font-scale-l: 1.818rem; // 20px
+$font-scale-xl: 2.18rem; // 24px
+$font-scale-xxl: 2.91rem; // 32px
+
+// line height
+$line-height-standard: 1.5;
+$line-height-secondary: 1.125;
+
+@mixin typography($weight, $scale, $lineHeight) {
+  font: normal $weight #{$scale} / #{$scale * $lineHeight} $font-family;
+}

@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-advanced-components"
+    }
+  },
+  "defaultProject": "angular-advanced-components",
+  "cli": {
+    "analytics": false
+  }
 }

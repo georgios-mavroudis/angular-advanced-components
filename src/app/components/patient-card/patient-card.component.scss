@@ -1,0 +1,32 @@
+@import '../../../assets/styles.scss';
+
+.card-container {
+  @include typography($weight-popular, $font-scale-xs, $line-height-secondary);
+  width: 15rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: solid 4px black;
+  background: lightgreen;
+  font-family: $font-family;
+  font-size: $font-size-s;
+}
+
+.upper-container {
+  display: flex;
+  flex-direction: row;
+
+  &__main-view {
+    @include typography($weight-popular, $font-scale-xs, $line-height-secondary);
+    flex: 1;
+    flex-direction: column;
+    font-size: medium;
+  }
+
+  &__side-view {
+    @include typography($weight-popular, $font-scale-xxs, $line-height-secondary);
+    flex: 1;
+    flex-direction: column;
+  }
+}
+
