@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './patient-card.component.html',
   styleUrls: ['./patient-card.component.scss']
 })
-export class PatientCardComponent implements OnInit {
+export class PatientCardComponent {
 
   @Input() name: string;
   @Input() condition: string;
@@ -15,7 +15,4 @@ export class PatientCardComponent implements OnInit {
   @Input() lastAppointment: number;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 }
