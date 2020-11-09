@@ -1,46 +1,9 @@
 <div class="parent-container">
-  <ng-content></ng-content>
-
-  <!-- ng-container usage  and pass an array of children -->
-  <!-- <ng-container *ngIf="showMessage">
-    <app-patient-card *ngFor="let item of patients"
-      [name]="item.name"
-      [condition]="item.condition"
-      [age]="item.age"
-      [gender]="item.gender"
-      [id]="item.id"
-      [lastAppointment]="item.lastAppointment"
-    ></app-patient-card>
-  </ng-container> -->
-
-  <!-- ng-template .a -->
-  <!-- <ng-container *ngIf="showMessage else content"></ng-container>
-  <ng-template #content>No message yet</ng-template> -->
-
-  <!-- ng-template .b -->
-  <!-- <ng-container
-    [ngTemplateOutlet]="tmpl"
-  ></ng-container>
-  <ng-template #tmpl>
-    <app-component-d></app-component-d>
-  </ng-template> -->
-
-  <!-- ng-template .c -->
-  <!-- <ng-container
-    [ngTemplateOutlet]="tmp"
-    [ngTemplateOutletContext]="ctx">
-  </ng-container>
-  <ng-template #tmp let-thing let-some="surname">
-    {{ thing }} {{ some }}
-  </ng-template> -->
-
-  <!-- <ng-container>
     <ng-template *ngFor="let item of patients"
       [ngTemplateOutlet]="patient"
-      [ngTemplateOutletContext]="{ $implicit: 'lo', $implicit: item, location: 'Paris', 'sdf': 'ty' }">
+      [ngTemplateOutletContext]="{ $implicit: item, location: 'Paris' }">
     </ng-template>
-  </ng-container> -->
-
-  <!-- view child -->
-  <app-component-c></app-component-c>
+    <ng-template
+      *ngTemplateOutlet="templateRef; context: ctx">
+    </ng-template>
 </div>

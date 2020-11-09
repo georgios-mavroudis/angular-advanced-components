@@ -1,19 +1,6 @@
 <app-parent>
-  <app-ng-content-child></app-ng-content-child>
-
-  <!--  child taking input from the app -->
-  <!-- <app-component-a [surname]="'Mavroudis'"></app-component-a> -->
-
-  <!-- child taking input from the parent (content child)-->
-  <!-- <app-component-b></app-component-b> -->
-
-  <!-- child taking input from the parent (content children)-->
-  <!-- <app-component-c></app-component-c>
-  <app-component-c></app-component-c>
-  <app-component-c></app-component-c> -->
-
   <!-- pass an array of children to a dumb component -->
-  <!-- <ng-template let-item let-loc="location">
+  <ng-template #pet let-item let-loc="location">
     <app-patient-card
       [name]="item.name"
       [condition]="item.condition"
@@ -23,14 +10,14 @@
       [lastAppointment]="item.lastAppointment"
     ></app-patient-card>
     {{loc}}
-  </ng-template> -->
+  </ng-template>
 </app-parent>
 
-<!-- <app-parent>
-  <ng-template let-pot let-ot="sdf" let-of="location" >
+<app-parent>
+  <ng-template #tempRef let-name let-last="surname">
     <app-component-b
-      [name]="pot"
-      [surname]="ot"
+      [name]="name"
+      [surname]="last"
     ></app-component-b>
   </ng-template>
-</app-parent> -->
+</app-parent>
